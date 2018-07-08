@@ -90,3 +90,35 @@ Container::getInstance()
             'view' => require dirname(__DIR__).'/config/view.php',
         ]);
     }, true);
+
+// our services custom post type
+function services_register() {
+    $labels = array(
+        'name' => _x('Services', 'post type general name'),
+        'singular_name' => _x('Service', 'post type singular name'),
+        'add_new' => _x('Add New', 'service'),
+        'add_new_item' => __('Service'),
+        'edit_item' => __('Edit Service'),
+        'new_item' => __('New Service'),
+        'view_item' => __('View Service'),
+        'search_items' => __('Search Service'),
+        'not_found' =>  __('Nothing Service'),
+        'not_found_in_trash' => __('Nothing found in Trash'),
+        'parent_item_colon' => ''
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'menu_position' => null,
+        'supports' => array( 'title', 'editor', 'thumbnail')
+    );
+
+    register_post_type( 'cncpt' , $args );
+}
+add_action('init', 'services_register');
