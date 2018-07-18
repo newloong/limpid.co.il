@@ -3,6 +3,7 @@ export default {
     var $container = $('.portfolio-container');
     $container.isotope({
       filter: '*',
+      isOriginLeft: false,
       animationOptions: {
         duration: 750,
         easing: 'linear',
@@ -10,21 +11,21 @@ export default {
       },
     });
 
-    $('.portfolio-filter a').click(function(event) {
-      event.preventDefault();
+    $('.portfolio-filter a').click(function(){
       $('.portfolio-filter .current').removeClass('current');
       $(this).addClass('current');
 
       var selector = $(this).attr('data-filter');
       $container.isotope({
+        isOriginLeft: false,
         filter: selector,
-          animationOptions: {
-            duration: 750,
-            easing: 'linear',
-            queue: false,
-          },
-        });
-        return false;
+        animationOptions: {
+          duration: 750,
+          easing: 'linear',
+          queue: false,
+        },
+      });
+      return false;
     });
   },
 };

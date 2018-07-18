@@ -30,6 +30,20 @@
   }
 }
 
+#portfolio-page-container {
+  padding: $section-padding;
+
+  .cell {
+    h4 {
+      font-size: 16px;
+
+      a {
+        color: #000;
+      }
+    }
+  }
+}
+
 /* Homepage */
 #services-container {
   padding: $section-padding;
@@ -145,6 +159,55 @@
   }
 }
 
-#portfolio-page-container {
-  padding: $section-padding;
+.portfolio-filter {
+  padding: 15px 0;
+}
+
+.portfolio-filter a {
+  margin-right: 6px;
+  color: #666;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  padding: 4px 15px;
+  border-radius: 50px;
+  display: inline-block;
+}
+
+.portfolio-filter a.current {
+  background: #1e1e1e;
+  border: 1px solid #1e1e1e;
+  color: #f9f9f9;
+}
+
+img {
+  margin: 5px;
+  max-width: 100%;
+}
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+.isotope,
+.isotope .isotope-item {
+  transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: right, top, -webkit-transform, opacity;
+  -moz-transition-property: right, top, -moz-transform, opacity;
+  -ms-transition-property: right, top, -ms-transform, opacity;
+  -o-transition-property: right, top, -o-transform, opacity;
+  transition-property: right, top, transform, opacity;
 }
