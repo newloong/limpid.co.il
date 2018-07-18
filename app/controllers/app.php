@@ -11,6 +11,16 @@ class App extends Controller
         return get_bloginfo('name');
     }
 
+    public function stylesheetDirectory()
+    {
+        return get_bloginfo('stylesheet_directory');
+    }
+
+    public function siteUrl()
+    {
+        return get_bloginfo('url');
+    }
+
     public static function title()
     {
         if (is_home()) {
@@ -29,5 +39,10 @@ class App extends Controller
             return __('Not Found', 'sage');
         }
         return get_the_title();
+    }
+
+    public function postThumbnail()
+    {
+        return wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
     }
 }

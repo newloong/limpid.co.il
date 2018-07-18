@@ -7,6 +7,8 @@
 use Roots\Sage\Config;
 use Roots\Sage\Container;
 
+require_once('inc/bfi-thumb.php');
+
 /**
  * Helper function for prettying up errors
  * @param string $message
@@ -116,9 +118,97 @@ function services_register() {
         'rewrite' => true,
         'capability_type' => 'post',
         'menu_position' => null,
-        'supports' => array( 'title', 'editor', 'thumbnail')
+        'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt')
     );
 
     register_post_type( 'cncpt' , $args );
 }
 add_action('init', 'services_register');
+
+
+function testimonials_register() {
+    $labels = array(
+        'name' => _x('Testimonials', 'post type general name'),
+        'singular_name' => _x('Testimonial', 'post type singular name'),
+        'add_new' => _x('Add New', 'testimonial'),
+        'add_new_item' => __('Testimonial'),
+        'edit_item' => __('Edit Testimonial'),
+        'new_item' => __('New Testimonial'),
+        'view_item' => __('View Testimonial'),
+        'search_items' => __('Search Testimonial'),
+        'not_found' =>  __('Nothing Testimonial'),
+        'not_found_in_trash' => __('Nothing found in Trash'),
+        'parent_item_colon' => ''
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'menu_position' => null,
+        'supports' => array( 'title')
+    );
+
+    register_post_type( 'testimonial' , $args );
+}
+add_action('init', 'testimonials_register');
+
+function excerpt($limit = 20) {
+    $excerpt = explode(' ', get_the_excerpt(), $limit);
+
+    if (count($excerpt)>=$limit) {
+        array_pop($excerpt);
+        $excerpt = implode(" ",$excerpt).'...';
+    } else {
+        $excerpt = implode(" ",$excerpt);
+    }
+
+    $excerpt = preg_replace('`[[^]]*]`','',$excerpt);
+
+    return $excerpt;
+}
+
+function content($limit) {
+    $content = explode(' ', get_the_content(), $limit);
+
+    if (count($content)>=$limit) {
+        array_pop($content);
+        $content = implode(" ",$content).'...';
+    } else {
+        $content = implode(" ",$content);
+    }
+
+    $content = preg_replace('/[.+]/','', $content);
+    $content = apply_filters('the_content', $content);
+    $content = str_replace(']]>', ']]&gt;', $content);
+
+    return $content;
+}
+
+add_filter('wpcf7_autop_or_not', '__return_false');
+
+function trunc($phrase, $max_words) {
+    $phrase = strip_shortcodes($phrase);
+    $phrase = strip_tags($phrase);
+    $phrase_array = explode(' ',$phrase);
+    if(count($phrase_array) > $max_words && $max_words > 0)
+      $phrase = implode(' ',array_slice($phrase_array, 0, $max_words));
+    return $phrase;
+}
+
+function categories($id) {
+    $categoryNames = [];
+    $categories = get_the_category($id);
+
+    foreach ($categories as $category) {
+        if ($category->id != 1) {
+            $categoryNames[] = str_replace(' ', '-', $category->name);
+        }
+    }
+
+    return implode(" ", $categoryNames);
+}

@@ -1,0 +1,150 @@
+#testimonials-container {
+  background: url('../images/testimonials-bg.jpg') no-repeat 0 0 scroll transparent;
+  background-size: cover;
+  padding: $section-padding;
+  text-align: center;
+
+  h2 {
+    color: #fff;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  h4,
+  span,
+  p {
+    color: #fff;
+  }
+
+  h4 {
+    margin-bottom: 0;
+  }
+
+  span {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .unslider-arrow {
+    display: none;
+  }
+}
+
+/* Homepage */
+#services-container {
+  padding: $section-padding;
+
+  h2 {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  #services {
+    .cell {
+      margin-bottom: 60px;
+      text-align: center;
+
+      p {
+        min-height: 150px;
+      }
+    }
+  }
+}
+
+#who-we-are-container {
+  background: #f4f4f4;
+  padding: $section-padding;
+  text-align: center;
+}
+
+#portfolio-container {
+  padding: $section-padding;
+
+  h2 {
+    text-align: center;
+  }
+}
+
+#latest-articles-container {
+  padding: $section-padding;
+
+  h2 {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}
+
+#customers-container {
+  padding: $section-padding;
+
+  h2 {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}
+
+#contact-container {
+  padding: $section-padding;
+}
+
+/* Single Page */
+#single-page-container {
+  #single-page-content-container {
+    padding: $section-padding;
+  }
+}
+
+/* About Page */
+#about-page-container {
+  padding: $section-padding;
+  padding-bottom: 0;
+  text-align: center;
+
+  .grid-container {
+    border-bottom: 1px solid #000;
+    padding-bottom: 60px;
+  }
+}
+
+#portal-page-container {
+  padding: $section-padding;
+
+  .article-section {
+    border-bottom: 1px solid #000;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .article {
+      margin-bottom: 30px;
+
+      h4 {
+        font-size: 18px;
+      }
+    }
+
+    .video {
+      h4 {
+        font-size: 18px;
+      }
+
+      iframe {
+        width: 100% !important;
+      }
+    }
+  }
+
+  div.cell.large-12:last-child .article-section {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+#portfolio-page-container {
+  padding: $section-padding;
+}

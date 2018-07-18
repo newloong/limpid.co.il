@@ -1,0 +1,18 @@
+input[type='submit'] {
+  border: none;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+
+a.button,
+input[type='submit'] {
+  &:hover {
+    background: #286090;
+  }
+
+  background: #bc1d29;
+  border-radius: 4px;
+  color: #fff;
+  padding: 6px 12px;
+}

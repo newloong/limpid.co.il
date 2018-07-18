@@ -1,0 +1,73 @@
+body {
+  direction: rtl;
+
+  .owl-carousel {
+    .owl-dot {
+      outline: none;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+ul.social-media {
+  display: inline;
+  list-style: none;
+  margin: 0;
+
+  li {
+    display: inline;
+
+    img {
+      max-width: 24px;
+    }
+  }
+}
+
+#post-title-container {
+  background: url('../images/header-bg.jpg') no-repeat center center scroll transparent;
+  background-size: cover;
+  height: 350px;
+}
+
+.unslider-nav {
+  text-align: center;
+
+  ol {
+    display: inline;
+
+    li {
+      background: #ccc;
+      border-radius: 100%;
+      cursor: pointer;
+      display: inline-block;
+      height: 12px;
+      margin: 0 5px;
+      text-indent: -9999999em;
+      width: 12px;
+    }
+
+    li.unslider-active {
+      background: #fff;
+    }
+  }
+}
+
+form.wpcf7-form {
+  p {
+    display: block;
+  }
+
+  input[type='text'],
+  input[type='email'],
+  input[type='tel'],
+  textarea {
+    border: 1px solid #ccc;
+    box-shadow: none;
+    width: 100%;
+    resize: no-resize;
+  }
+}
+

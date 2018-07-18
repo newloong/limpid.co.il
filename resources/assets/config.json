@@ -8,9 +8,12 @@
       "./scripts/customizer.js"
     ]
   },
+  "enabled": {
+    "sourceMaps": true
+  },
   "publicPath": "/app/themes/sage",
   "devUrl": "http://limpid-dev.com",
-  "proxyUrl": "http://localhost:3000",
+  "proxyUrl": "http://localhost:8080",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [
     "app/**/*.php",

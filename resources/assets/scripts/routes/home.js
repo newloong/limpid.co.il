@@ -1,8 +1,23 @@
 export default {
   init() {
-    // JavaScript to be fired on the home page
+    $('#customers').owlCarousel({
+      rtl: true,
+      loop:true,
+      margin:10,
+      nav:true,
+      responsive:{
+        0:{
+          items:1,
+        },
+        600:{
+          items:5,
+        },
+        1000:{
+          items:5,
+        },
+      },
+    });
   },
   finalize() {
-    // JavaScript to be fired on the home page, after the init JS
   },
 };
