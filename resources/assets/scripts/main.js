@@ -3,6 +3,7 @@ import 'jquery';
 import 'owl.carousel/dist/owl.carousel.min.js';
 import 'unslider/src/js/unslider.js';
 import 'isotope-layout/dist/isotope.pkgd.min.js';
+import 'jquery-background-video/jquery.background-video.js';
 
 // Import everything from autoload
 import "./autoload/**/*"

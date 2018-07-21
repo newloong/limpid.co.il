@@ -30,21 +30,62 @@
   }
 }
 
-#portfolio-page-container {
+#portfolio-page-container,
+#portfolio-container {
   padding: $section-padding;
 
+  .portfolio-container a {
+    color: #fff;
+    display: block;
+    position: relative;
+
+    &:hover .portfolio-content-container {
+      visibility: visible;
+    }
+  }
+
   .cell {
+    position: relative;
+
+    img {
+      display: block;
+    }
+
+    .portfolio-content-container {
+      background: rgba(0, 0, 0, .5);
+      bottom: 0;
+      display: table;
+      height: 135px;
+      left: -5px;
+      position: absolute;
+      top: 0;
+      visibility: hidden;
+      width: 100%;
+
+      .portfolio-content {
+        display: table-cell;
+        padding: 15px;
+        text-align: center;
+        vertical-align: middle;
+      }
+    }
+
     h4 {
       font-size: 16px;
 
       a {
         color: #000;
+        display: block;
       }
     }
   }
 }
 
 /* Homepage */
+#video-wrapper {
+  height: 550px;
+}
+
 #services-container {
   padding: $section-padding;
 

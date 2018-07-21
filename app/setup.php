@@ -10,9 +10,13 @@ use Roots\Sage\Template\BladeProvider;
 /**
  * Theme assets
  */
+define("THEME_DIR", get_template_directory_uri());
+
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
     wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
+    wp_enqueue_script('google-map-api', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCXCQNoWgUPrSVQqISK2exR3XeCECzw1gA', ['jquery'], null, true);
+    wp_enqueue_script('sage/google-map.js', THEME_DIR . '/assets/scripts/google-map.js', ['jquery'], null, true);
 }, 100);
 
 /**

@@ -212,3 +212,25 @@ function categories($id) {
 
     return implode(" ", $categoryNames);
 }
+
+if(function_exists('acf_add_options_page')) {
+    acf_add_options_page(array(
+        'page_title'    => 'Theme General Settings',
+        'menu_title'    => 'Home options',
+        'menu_slug'     => 'theme-general-settings',
+        'capability'    => 'edit_posts',
+        'redirect'      => false
+    ));
+
+    acf_add_options_sub_page(array(
+        'page_title'    => 'Theme Home Settings',
+        'menu_title'    => 'Home',
+        'parent_slug'   => 'theme-general-settings',
+    ));
+}
+
+function my_acf_init() {
+    acf_update_setting('google_api_key', 'AIzaSyCXCQNoWgUPrSVQqISK2exR3XeCECzw1gA');
+}
+
+add_action('acf/init', 'my_acf_init');

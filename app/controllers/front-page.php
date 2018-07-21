@@ -30,4 +30,14 @@ class FrontPage extends Controller
         $args = array('post_type' => 'testimonial', 'posts_per_page' => -1);
         return new WP_Query($args);
     }
+
+    public function projects()
+    {
+        return get_field('works', 'options');
+    }
+
+    public function map()
+    {
+        return get_field('map', 'options');
+    }
 }

@@ -8,7 +8,7 @@
     @include('partials.home.video')
     @include('partials.commons.services')
     @include('partials.home.who-we-are')
-    {{-- @include('partials.home.portfolio') --}}
+    @include('partials.home.portfolio')
     @include('partials.home.latest-articles')
     @include('partials.home.customers')
     @include('partials.commons.testimonials')
