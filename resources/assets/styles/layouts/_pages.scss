@@ -252,3 +252,21 @@ img {
   -o-transition-property: right, top, -o-transform, opacity;
   transition-property: right, top, transform, opacity;
 }
+
+#contact-us-page-container {
+  padding: $section-padding;
+
+  h1 {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  #contact-details {
+    margin-bottom: 30px;
+
+    span {
+      color: #C9223A;
+      font-weight: bold;
+    }
+  }
+}
