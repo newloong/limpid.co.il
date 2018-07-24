@@ -9,8 +9,7 @@ class FrontPage extends Controller
 {
     public function latestArticles()
     {
-        $args = array('cat' => 15, 'posts_per_page' => 3);
-        return new WP_Query($args);
+        return get_field('latest_p','options');
     }
 
     public function services()

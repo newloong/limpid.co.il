@@ -6,13 +6,26 @@
             </div>
 
             <div id="articles" class="grid-x grid-padding-x small-up-1 medium-up-3 large-up-3">
-                @while($latest_articles->have_posts()) @php($latest_articles->the_post())
+                @foreach ($latest_articles as $latestArticle)
+                    @php($post = $latestArticle['recent_post'])
+                    @php($postID = $post->ID)
+
+                    @php($params = array( 'width' => 380, 'height' => 200 ))
+                    @php($thumbnail = get_the_post_thumbnail_url($postID))
+
                     <div class="cell">
-                        <h4>{!! get_the_title() !!}</h4>
-                        <p>{!! excerpt() !!}</p>
-                        <a href="{{ get_permalink() }}" class="button">קרא עוד</a>
+                        <div class="article">
+                            <a href="{{ get_the_permalink($postID) }}">
+                                <img src="{{ bfi_thumb($thumbnail, $params) }}">
+
+                                <div class="article-content">
+                                    <h4>{!! get_the_title($postID) !!}</h4>
+                                    <p>{!! trunc($post->post_content, 10) !!}</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                @endwhile @php(wp_reset_postdata())
+                @endforeach
             </div>
         </div>
     </div>

@@ -1,5 +1,26 @@
 body {
   direction: rtl;
+  font-family: 'Assistant', sans-serif !important;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #bc1d29;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  a,
+  li,
+  p,
+  em,
+  strong,
+  u,
+  i {
+    font-family: 'Assistant', sans-serif !important;
+  }
 
   .owl-carousel {
     .owl-dot {

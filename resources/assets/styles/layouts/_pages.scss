@@ -99,7 +99,19 @@
       margin-bottom: 60px;
       text-align: center;
 
+      .button {
+        background: url('../images/svg/leftarrow.svg') no-repeat 10px 11px scroll transparent;
+        border: 1px solid #000;
+        color: #000;
+        padding: 10px 25px;
+
+        &:hover {
+          background-color: #a1a1a1;
+        }
+      }
+
       p {
+        color: #000;
         min-height: 150px;
       }
     }
@@ -107,9 +119,27 @@
 }
 
 #who-we-are-container {
-  background: #f4f4f4;
-  padding: $section-padding;
+  background: url('../images/aboutus.png') no-repeat center scroll #f4f4f4;
+  background-size: cover;
+  padding: 90px 0;
+  position: relative;
   text-align: center;
+
+  &:after {
+    background: rgba(255, 255, 255, .5);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .grid-container {
+    position: relative;
+    z-index: 99;
+  }
 }
 
 #portfolio-container {
@@ -121,11 +151,48 @@
 }
 
 #latest-articles-container {
+  background: url('../images/latestbg.png') no-repeat 0 0 scroll transparent;
+  background-size: cover;
   padding: $section-padding;
+  position: relative;
+
+  &:after {
+    background: rgba(0, 0, 0, .5);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .grid-container {
+    position: relative;
+    z-index: 99;
+  }
 
   h2 {
+    color: #fff;
     margin-bottom: 30px;
     text-align: center;
+  }
+
+  .article {
+    background: #fff;
+
+    img {
+      margin: 0;
+    }
+
+    .article-content {
+      min-height: 180px;
+      padding: 15px;
+
+      p {
+        color: #000;
+      }
+    }
   }
 }
 
