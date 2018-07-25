@@ -21,4 +21,5 @@
     </div>
 
     @include('partials.commons.services')
+    @include('partials.commons.footer-contact-form')
 @endsection

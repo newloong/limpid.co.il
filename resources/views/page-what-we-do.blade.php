@@ -7,4 +7,5 @@
 @section('content')
     @include('partials.commons.post-title')
     @include('partials.commons.services')
+    @include('partials.commons.footer-contact-form')
 @endsection
