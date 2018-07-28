@@ -244,6 +244,58 @@
 #portal-page-container {
   padding: $section-padding;
 
+  #upper-part-container {
+    padding-bottom: 30px;
+  }
+
+  #social-media-container {
+    span {
+      background-color: #bc1d29 !important;
+    }
+  }
+
+  #newsletter-container {
+    background: url('../images/contbg.jpg') no-repeat center scroll transparent;
+    background-size: cover;
+    padding: 30px;
+    position: relative;
+
+    img {
+      bottom: 0;
+      position: absolute;
+      left: 0;
+    }
+
+    form {
+      position: relative;
+      z-index: 999;
+    }
+
+    h3 {
+      font-size: 24px;
+      color: #ffffff;
+    }
+
+    input[type='text'],
+    input[type='email'] {
+      background: none;
+      border: 1px solid #fff;
+    }
+
+    input[type='submit'] {
+      background: #000;
+      padding: 20px;
+    }
+
+    .ajax-loader {
+      display: none;
+    }
+
+    form.wpcf7-form p {
+      margin: 0;
+    }
+  }
+
   .article-section {
     border-bottom: 1px solid #000;
     margin-bottom: 30px;
@@ -259,6 +311,14 @@
 
       h4 {
         font-size: 18px;
+      }
+
+      a {
+        display: block;
+
+        p {
+          color: #000;
+        }
       }
     }
 

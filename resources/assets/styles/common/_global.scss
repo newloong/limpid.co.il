@@ -41,8 +41,14 @@ ul.social-media {
   li {
     display: inline;
 
-    img {
-      max-width: 24px;
+    span {
+      background-color: #fff !important;
+      display: inline-block;
+      background-repeat: no-repeat !important;
+      height: 30px;
+      width: 30px;
+      -webkit-mask-size: cover;
+      mask-size: cover;
     }
   }
 }
@@ -51,6 +57,10 @@ ul.social-media {
   background: url('../images/header-bg.jpg') no-repeat center center scroll transparent;
   background-size: cover;
   height: 530px;
+}
+
+.unslider {
+  overflow: hidden !important;
 }
 
 .unslider-nav {

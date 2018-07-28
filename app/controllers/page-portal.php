@@ -16,4 +16,9 @@ class PagePortal extends Controller
     {
         return get_field('videos');
     }
+
+    public function featuredArticles()
+    {
+        return get_field('featured_articles');
+    }
 }
