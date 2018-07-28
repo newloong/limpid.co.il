@@ -21,6 +21,7 @@
             </div>
             <div class="grid-x grid-padding-x">
                 @while(have_posts()) @php(the_post())
+                    @include('partials.portal.events-calendar')
                     @include('partials.portal.articles')
                     @include('partials.portal.videos')
                 @endwhile @php(wp_reset_postdata())
