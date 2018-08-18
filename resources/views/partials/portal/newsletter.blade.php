@@ -1,13 +1,9 @@
-<div id="newsletter-container">
-    <img src="@asset('images/man.png')" alt="">
-
+<div id="newsletter-container" class="sidebar">
     <div class="grid-x padding-x">
-        <div class="cell mediu-8 large-8">
+        <div class="cell medium-12 large-12">
             <h3>{!! the_field('conttit') !!}</h3>
             @php echo do_shortcode('[contact-form-7 id="465" title="פורטל"]') @endphp
         </div>
-
-        <div class="cell medium-4 large-4"></div>
     </div>
 </div>
 

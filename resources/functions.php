@@ -240,3 +240,21 @@ function my_acf_init() {
 }
 
 add_action('acf/init', 'my_acf_init');
+
+function wpcf_is_404( $url = null ){
+    $code = '';
+    if( is_null( $url ) ){
+        return false;
+    }else{
+        $handle = curl_init($url);
+        curl_setopt($handle,  CURLOPT_RETURNTRANSFER, TRUE);
+        curl_exec($handle);
+        $code = curl_getinfo($handle, CURLINFO_HTTP_CODE);
+        if( $code == '404' ){
+            return true;
+        }else{
+            return false;
+        }
+        curl_close($handle);
+    }
+}

@@ -1,6 +1,6 @@
 #header-cta-container {
   background: #313131;
-  padding: 25px 0;
+  padding: 15 0;
 
   .medium-4.large-4 {
     direction: ltr;
@@ -11,7 +11,7 @@
       color: #fff;
       display: inline-block;
       font-weight: bold;
-      font-size: 14px;
+      font-size: 23px;
       margin-right: 15px;
 
       &:first-child {
@@ -36,6 +36,17 @@
     .menu {
       a {
         color: #000;
+        font-size: 19px;
+      }
+
+      #menu-item-1476 span {
+        display: none;
+      }
+
+      img {
+        margin: 0;
+        position: relative;
+        top: 3px;
       }
 
       li:first-child a {

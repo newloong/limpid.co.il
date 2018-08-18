@@ -6,7 +6,7 @@
             </div>
 
             <div class="cell medium-6 large-6">
-                <div class="acf-map">
+                <div class="acf-map" style="height: 542px;">
                     <div class="marker" data-lat="{{ $map['lat'] }}" data-lng="{{ $map['lng'] }}"></div>
                 </div>
             </div>

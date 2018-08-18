@@ -34,6 +34,10 @@
 #portfolio-container {
   padding: $section-padding;
 
+  h1 {
+    text-align: center;
+  }
+
   .portfolio-container a {
     color: #fff;
     display: block;
@@ -104,6 +108,8 @@
         background: url('../images/svg/leftarrow.svg') no-repeat 10px 11px scroll transparent;
         border: 1px solid #000;
         color: #000;
+        font-size: 19px;
+        font-weight: bold;
         padding: 10px 25px;
 
         &:hover {
@@ -120,14 +126,14 @@
 }
 
 #who-we-are-container {
-  background: url('../images/aboutus.png') no-repeat center scroll #f4f4f4;
+  background: url('../images/aboutus.jpg') no-repeat top scroll #f4f4f4;
   background-size: cover;
-  padding: 90px 0;
+  padding: 220px 0;
   position: relative;
   text-align: center;
 
   &:after {
-    background: rgba(255, 255, 255, .5);
+    background: rgba(231, 231, 230, .5);
     content: "";
     display: block;
     height: 100%;
@@ -135,6 +141,20 @@
     position: absolute;
     top: 0;
     width: 100%;
+  }
+
+  h2 {
+    font-weight: bold;
+    margin-bottom: 60px;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .divider {
+    margin-bottom: 60px;
   }
 
   .grid-container {
@@ -148,6 +168,10 @@
 
   h2 {
     text-align: center;
+  }
+
+  .portfolio-filter a {
+    display: inline;
   }
 }
 
@@ -220,14 +244,18 @@
 /* What we do */
 .page-what-we-do {
   #post-title-container {
-    background: url('../images/skyline.jpg') no-repeat 0 0 scroll transparent;
+    background: url('../images/skyline.jpg') no-repeat center scroll transparent;
   }
 }
 
 /* About Page */
 .page-what-we-are {
   #post-title-container {
-    background: url('../images/aboutus.png') no-repeat 0 0 scroll transparent;
+    background: url('../images/aboutus.jpg') no-repeat 0 0 scroll transparent;
+  }
+
+  #services-container h2 {
+    color: #000000;
   }
 }
 
@@ -240,6 +268,43 @@
     border-bottom: 1px solid #000;
     padding-bottom: 60px;
   }
+
+  h2, h3, h4 {
+    color: #000000;
+    font-weight: 300;
+    font-size: 1.9375rem;
+
+    strong {
+      font-weight: 300;
+    }
+  }
+}
+
+.page-portal {
+  #post-title-container {
+    background: url('../images/hongkong.jpg') no-repeat 0 0 scroll transparent;
+  }
+
+  .sidebar {
+    margin-bottom: 30px;
+  }
+
+  ::placeholder {
+    color: white !important;
+    opacity: 1; /* Firefox */
+  }
+
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white !important;
+  }
+
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: white !important;
+  }
+
+  .wpcf7-form label.error {
+    display: none;
+  }
 }
 
 #portal-page-container {
@@ -249,6 +314,54 @@
     padding-bottom: 30px;
   }
 
+  #top-stories-container {
+    margin-bottom: 60px;
+
+    .top-story {
+      padding: 3px;
+      position: relative;
+
+      a {
+        display: block;
+        position: relative;
+
+        img {
+          margin: 0;
+        }
+
+        h4 {
+          background: #C22033;
+          bottom: 0;
+          color: #ffffff;
+          font-size: 18px;
+          margin: 0;
+          padding: 10px;
+          position: absolute;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .owl-theme .owl-nav {
+    text-align: right;
+
+    button {
+      border: 1px solid #e1e1e1;
+      height: 25px;
+      width: 25px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  #introduction {
+    padding: 0 0 60px;
+    text-align: center;
+  }
+
   #social-media-container {
     span {
       background-color: #bc1d29 !important;
@@ -256,7 +369,7 @@
   }
 
   #newsletter-container {
-    background: url('../images/contbg.jpg') no-repeat center scroll transparent;
+    background: #C9223A;
     background-size: cover;
     padding: 30px;
     position: relative;
@@ -284,7 +397,8 @@
     }
 
     input[type='submit'] {
-      background: #000;
+      background: #ffffff;
+      color: #000000;
       padding: 20px;
     }
 
@@ -298,39 +412,32 @@
   }
 
   .article-section {
-    border-bottom: 1px solid #000;
     margin-bottom: 30px;
     padding-bottom: 30px;
 
-    h2 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
+    .title-container {
+      border-bottom: 1px solid #C22033;
+      margin-bottom: 15px;
 
-    .article {
-      margin-bottom: 30px;
-
-      h4 {
+      h3 {
+        background: #C22033;
+        color: #ffffff;
+        display: inline-block;
         font-size: 18px;
-      }
-
-      a {
-        display: block;
-
-        p {
-          color: #000;
-        }
+        margin: 0;
+        padding: 10px 12px;
       }
     }
 
-    .video {
+    .item {
       h4 {
+        color: #000000;
         font-size: 18px;
       }
+    }
 
-      iframe {
-        width: 100% !important;
-      }
+    iframe {
+      width: 100% !important;
     }
   }
 
@@ -353,6 +460,7 @@
   padding: 4px 15px;
   border-radius: 50px;
   display: inline-block;
+  text-align: center;
 }
 
 .portfolio-filter a.current {
@@ -397,6 +505,10 @@ img {
 #contact-us-page-container {
   padding: $section-padding;
 
+  .acf-map {
+    height: 540px;
+  }
+
   h1 {
     margin-bottom: 30px;
     text-align: center;
@@ -409,5 +521,11 @@ img {
       color: #C9223A;
       font-weight: bold;
     }
+  }
+}
+
+.page-portfolio {
+  #post-title-container {
+    background: url('../images/hongkong.jpg') no-repeat center scroll transparent;
   }
 }
