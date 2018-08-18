@@ -1,0 +1,95 @@
+@media only screen
+and (max-width : 1023px) {
+  .mobile {
+    display: block;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  #header-cta-container {
+    display: none;
+  }
+
+  #services-container #services .cell p {
+    min-height: 0px;
+  }
+
+  #latest-articles-container .article {
+    background: none;
+    text-align: center;
+
+    a {
+      background: #ffffff;
+      display: block;
+      margin: 0 auto 25px;
+      width: 75%;
+
+      img {
+        display: block;
+        margin: 0;
+        width: 100%;
+      }
+    }
+  }
+
+  #footer-container {
+    p, ul {
+      display: block;
+      margin-bottom: 30px;
+    }
+
+    #menu-footer-nav li {
+      width: 100%;
+    }
+  }
+
+  .content {
+    ol, ul {
+      margin-right: 1.25rem;
+    }
+  }
+
+  #related-posts {
+    .article {
+      margin-bottom: 30px;
+    }
+  }
+
+  .portfolio-filter a {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .portfolio-container {
+    img {
+      width: 100%;
+    }
+  }
+
+  #portfolio-page-container .cell .portfolio-content-container, #portfolio-container .cell .portfolio-content-container {
+    height: 100%;
+  }
+
+  #post-title-container {
+    height: 330px;
+  }
+
+  .menu-main-menu-container {
+    display: none;
+  }
+
+  .shiftnav .fa, .shiftnav-toggle .fa {
+    font-family: FontAwesome !important;
+  }
+
+  .shiftnav.shiftnav-nojs.shiftnav-skin-standard-dark ul.shiftnav-menu li.menu-item > .shiftnav-target:hover, .shiftnav.shiftnav-skin-standard-dark ul.shiftnav-menu li.menu-item.shiftnav-active > .shiftnav-target, .shiftnav.shiftnav-skin-standard-dark ul.shiftnav-menu li.menu-item.shiftnav-in-transition > .shiftnav-target, .shiftnav.shiftnav-skin-standard-dark ul.shiftnav-menu li.menu-item.current-menu-item > .shiftnav-target, .shiftnav.shiftnav-skin-standard-dark ul.shiftnav-menu > li.shiftnav-sub-accordion.current-menu-ancestor > .shiftnav-target, .shiftnav.shiftnav-skin-standard-dark ul.shiftnav-menu > li.shiftnav-sub-shift.current-menu-ancestor > .shiftnav-target, .shiftnav.shiftnav-skin-standard-dark ul.shiftnav-menu.shiftnav-active-highlight li.menu-item > .shiftnav-target:active, .shiftnav.shiftnav-skin-standard-dark ul.shiftnav-menu.shiftnav-active-on-hover li.menu-item > .shiftnav-target:hover {
+    background: #bc1d29;
+  }
+
+  #shiftnav-toggle-main {
+    top: 30px;
+    visibility: visible;
+  }
+}

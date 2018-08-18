@@ -302,3 +302,28 @@ form.wpcf7-form {
     width: 100%;
   }
 }
+
+
+#related-posts {
+  margin-top: 60px;
+
+  div.divider {
+    margin-bottom: 30px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  a {
+    color: #000000;
+  }
+}
+
+.mobile {
+  display: none;
+}
+
+#shiftnav-toggle-main {
+  visibility: hidden;
+}

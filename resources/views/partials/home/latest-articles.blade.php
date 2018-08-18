@@ -10,7 +10,7 @@
                 </div>
             </div>
 
-            <div id="articles" class="grid-x grid-padding-x small-up-1 medium-up-3 large-up-3">
+            <div id="articles" class="grid-x grid-padding-x small-up-1 medium-up-1 large-up-3">
                 @foreach ($latest_articles as $latestArticle)
                     @php($post = $latestArticle['recent_post'])
                     @php($postID = $post->ID)

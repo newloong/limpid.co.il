@@ -5,7 +5,7 @@
                 <h2>השירותים שלנו</h2>
             </div>
 
-            <div id="services" class="grid-x grid-padding-x small-up-1 medium-up-4 large-up-4">
+            <div id="services" class="grid-x grid-padding-x small-up-1 medium-up-1 large-up-4">
                 @while($services->have_posts()) @php($services->the_post())
                     <div class="cell">
                         <a href="{{ get_permalink() }}">

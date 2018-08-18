@@ -22,21 +22,16 @@
 
         <div class="grid-container">
             <div class="grid-x grid-padding-x">
-                <div class="cell medium-4 large-4">
-                    <div class="sidebar">
-                        @include('partials.portal.newsletter')
-                    </div>
-
-                    <div class="sidebar">
-                        @include('partials.portal.events-calendar')
-                    </div>
-
-                    <div class="sidebar">
-                        @include('partials.portal.videos')
-                    </div>
+                <div class="desktop cell medium-12 large-4">
+                    @include('partials.portal.sidebar')
                 </div>
-                <div class="cell medium-8 large-8">
+
+                <div class="cell medium-12 large-8">
                     @include('partials.portal.articles')
+                </div>
+
+                <div class="mobile cell medium-12 large-4">
+                    @include('partials.portal.sidebar')
                 </div>
             </div>
         </div>

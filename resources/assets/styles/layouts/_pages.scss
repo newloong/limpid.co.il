@@ -419,7 +419,7 @@
       border-bottom: 1px solid #C22033;
       margin-bottom: 15px;
 
-      h3 {
+      h4 {
         background: #C22033;
         color: #ffffff;
         display: inline-block;
@@ -429,15 +429,23 @@
       }
     }
 
-    .item {
-      h4 {
-        color: #000000;
-        font-size: 18px;
-      }
+    h4 {
+      font-size: 18px;
     }
 
     iframe {
       width: 100% !important;
+    }
+
+    .button {
+      background: none;
+      border: 1px solid #000;
+      color: #000;
+      padding: 10px 25px;
+
+      &:hover {
+        background: #a1a1a1;
+      }
     }
   }
 

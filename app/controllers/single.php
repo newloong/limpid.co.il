@@ -21,7 +21,7 @@ class Single extends Controller
 
     public function relatedPosts()
     {
-        $args = array('cat' => 15, 'posts_per_page' => 3, 'post__not_in' => array(get_the_ID()));
+        $args = array('cat' => 15, 'posts_per_page' => 4, 'post__not_in' => array(get_the_ID()));
         return new WP_Query($args);
     }
 }

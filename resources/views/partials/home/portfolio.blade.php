@@ -12,7 +12,7 @@
                     @endforeach
                 </div>
 
-                <div class="portfolio-container grid-x grid-padding-x small-up-1 medium-up-4 large-up-4">
+                <div class="portfolio-container grid-x grid-padding-x small-up-1 medium-up-3 large-up-4">
                     @foreach ($projects as $project)
                         @php($works = $project['project'])
                         @php($className = str_replace(' ', '-', $project['title']))
