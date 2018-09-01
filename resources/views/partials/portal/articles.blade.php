@@ -24,8 +24,6 @@
                             @endif
 
                             <h4>{!! get_the_title($articleID) !!}</h4>
-
-                            <a href="{{ get_the_permalink($articleID) }}" class="button">קרא עוד</a>
                         </a>
                     </div>
 

@@ -5,5 +5,7 @@
         @include('partials.commons.post-title')
         @include('partials.portfolio.portfolio-main')
         @include('partials.commons.footer-contact-form')
+    @else
+        @include('partials.commons.post-title')
     @endif
 @endsection

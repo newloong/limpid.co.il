@@ -26,3 +26,10 @@
         </div>
     </div>
 </div>
+
+
+<script>
+    jQuery(document).ready(function($) {
+        $('.portfolio-filter a:first-child').trigger('click');
+    })
+</script>

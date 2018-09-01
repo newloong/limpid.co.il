@@ -1,5 +1,5 @@
-<div id="video-wrapper">
-    <video id="video" loop autoplay muted poster="path/to/your/poster.jpg">
-        <source src="{{ $stylesheet_directory }}/assets/videos/videos.mp4" type="video/mp4">
-    </video>
+<div id="video-wrapper"
+    data-vide-bg="mp4: {{ $stylesheet_directory }}/assets/videos/videos.mp4, poster: {{ $stylesheet_directory }}/assets/images/video.jpg"
+    data-vide-options="posterType: jpg, loop: true, muted: false, position: 50% 50%">
+
 </div>

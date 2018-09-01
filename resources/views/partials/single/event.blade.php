@@ -2,8 +2,6 @@
     <div class="grid-x grid-padding-x">
         <div class="cell large-12">
             @while(have_posts()) @php the_post() @endphp
-                @include('partials.commons.social-media-share')
-
                 <h1>{!! get_the_title() !!}</h1>
                 {!! get_the_content() !!}
             @endwhile @php(wp_reset_postdata())
@@ -11,7 +9,7 @@
 
         <div class="cell large-12">
                 <div id="related-posts">
-                    <h2>עבודות נוספות בנושא:</h2>
+                    <h2>עבודות נוספות בנושא</h2>
 
                     <div class="divider">
                         <span>

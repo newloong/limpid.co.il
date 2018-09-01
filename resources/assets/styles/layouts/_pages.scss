@@ -252,6 +252,7 @@
 .page-what-we-are {
   #post-title-container {
     background: url('../images/aboutus.jpg') no-repeat 0 0 scroll transparent;
+    background-position: center;
   }
 
   #services-container h2 {
@@ -283,6 +284,7 @@
 .page-portal {
   #post-title-container {
     background: url('../images/hongkong.jpg') no-repeat 0 0 scroll transparent;
+    background-position: center;
   }
 
   .sidebar {
@@ -536,4 +538,19 @@ img {
   #post-title-container {
     background: url('../images/hongkong.jpg') no-repeat center scroll transparent;
   }
+}
+
+
+.single {
+  h1 {
+    font-size: calc(20px + 1.043vw);
+  }
+
+  p, li, a {
+    font-size: 21px;
+  }
+}
+
+#event-page-container {
+  padding: $section-padding;
 }
