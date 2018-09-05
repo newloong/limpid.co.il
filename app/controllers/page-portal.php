@@ -21,4 +21,10 @@ class PagePortal extends Controller
     {
         return get_field('featured_articles');
     }
+
+    public function events()
+    {
+        $args = array('post_type' => 'event', 'posts_per_page' => 6);
+        return new WP_Query($args);
+    }
 }

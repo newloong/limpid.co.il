@@ -11,7 +11,7 @@
 
         <div class="cell large-12">
                 <div id="related-posts">
-                    <h2>עבודות נוספות בנושא:</h2>
+                    <h2>מאמרים נוספים בנושא</h2>
 
                     <div class="divider">
                         <span>

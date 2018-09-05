@@ -28,6 +28,7 @@
 
                 <div class="cell medium-12 large-8">
                     @include('partials.portal.articles')
+                    @include('partials.portal.events')
                 </div>
 
                 <div class="mobile cell medium-12 large-4">
